@@ -10,9 +10,9 @@ int main() {
 
     if (nombre >= 1000 && nombre <= 9999) {
         a = nombre / 1000;            
-        b = (nombre / 100) % 10;  
-        c = (nombre / 10) % 10;    
-        d = nombre % 10;
+        b = (nombre - a) % 10;  
+        c = (nombre - b) % 10;    
+        d = (nombre - c) % 10;
     printf("%d%d%d%d\n", d, c, b, a);
     } else {
         printf("Veuillez entrer un nombre à quatre chiffres.\n");
